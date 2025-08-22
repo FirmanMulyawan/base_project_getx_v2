@@ -1,5 +1,8 @@
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
+import '../../features/splash/binding/splash_binding.dart';
+import '../../features/splash/presentation/splash_screen.dart';
+
 class AppRoute {
   static const String defaultRoute = '/';
   static const String loginScreen = '/loginScreen';
@@ -10,10 +13,11 @@ class AppRoute {
   static const String detailItemScreen = '/detailItemScreen';
 
   static List<GetPage> pages = [
-    // GetPage(
-    //   name: defaultRoute,
-    //   page: () => const SplashScreen(),
-    // ),
+    GetPage(
+      name: defaultRoute,
+      page: () => const SplashScreen(),
+      binding: SplashBinding(),
+    ),
     // GetPage(
     //   name: loginScreen,
     //   page: () => const LoginScreen(),
